@@ -81,7 +81,6 @@ public class Deck {
        size--;
        Card c = cards.get(size);
        return c;
-        Car       c   }
     }
 
     /**
