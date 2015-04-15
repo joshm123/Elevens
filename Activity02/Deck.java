@@ -77,12 +77,11 @@ public class Deck {
     public Card deal() {
         if(cards.isEmpty() == true){
         return null;
-        }
-        else{
-        size--;
-        Card x = cards.get(size);
-        return x;
-        }
+       }
+       size--;
+       Card c = cards.get(size);
+       return c;
+        Car       c   }
     }
 
     /**
