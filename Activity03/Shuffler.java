@@ -62,7 +62,27 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int[] temp = new int[values.length];
+         
+        // (values.length + 1) / 2 is the middle index of the array
+        // loop for first half of array values
+        // even index values only for temp array
+        for (int j = 0 ; j < (values.length/2)+1; j++)
+            temp[j+1] = values[j];
+         
+        // loop for second half of array values
+        // odd index values only for temp array
+        int position = 1; //the initial odd index value of temp array
+        for (int k = values.length - values.length/2; k < values.length; k++)
+        {
+            temp[position] = values[k];
+            position +=2;
+        }
+         
+        // Copy elements back to values
+        for (int y = 0; y < values.length; y++)
+            values[y] = temp[y];
+
 	}
 
 	/**
