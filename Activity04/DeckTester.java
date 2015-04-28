@@ -15,13 +15,25 @@ public class DeckTester {
 		int[] pointValues = {11, 12, 13};
 		Deck d = new Deck(ranks, suits, pointValues);
 
-		System.out.println("**** Original Deck Methods ****");
-		System.out.println("  toString:\n" + d.toString());
-		System.out.println("  isEmpty: " + d.isEmpty());
-		System.out.println("  size: " + d.size());
-		System.out.println();
-		System.out.println();
-
+	System.out.println("**** Original Deck Methods ****");
+	System.out.println("  toString:\n" + d.toString());
+	System.out.println("  isEmpty: " + d.isEmpty());
+	System.out.println("  size: " + d.size());
+	System.out.println();
+	System.out.println();
+		
+	 System.out.println("**** Test Shuffle ****");
+        d.shuffle();
+        System.out.println("The deck was shuffled correctly: " + d.arePermutations(e));
+        System.out.println();
+        System.out.println();
+        
+        System.out.println("**** Deck Methods After Shuffle ****");
+        System.out.println("  toString:\n" + d.toString());
+        System.out.println("  isEmpty: " + d.isEmpty());
+        System.out.println("  size: " + d.size());
+        System.out.println();
+        System.out.println();
 		System.out.println("**** Deal a Card ****");
 		System.out.println("  deal: " + d.deal());
 		System.out.println();
